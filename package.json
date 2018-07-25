@@ -1,0 +1,26 @@
+{
+    "name": "homicide",
+    "version": "1.0.0",
+    "main": "app/index.js",
+    "license": "MIT",
+    "devDependencies": {
+        "electron-builder": "^20.25.0"
+    },
+    "scripts": {
+        "pack": "yarn dist --dir",
+        "dist": "electron-builder -w"
+    },
+    "build": {
+        "appId": "homicide",
+        "files": [
+            "app/**/*",
+            "node_modules/**/*",
+            "package.json"
+        ],
+        "directories": {
+            "buildResources": "resources"
+        },
+        "publish": null
+    },
+    "postinstall": "electron-builder install-app-deps"
+}
